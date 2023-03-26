@@ -12,7 +12,6 @@ body{
 
 h2{
     margin-bottom: 1rem;
-    color: blue
 }
 button{
     padding: 0.6rem 1.2rem;
@@ -26,9 +25,19 @@ button{
     z-index: 5;
     transition: 0.4s;
 }
+#close-modal{
+    background-color: transparent;
+    color: red;
+    top: 0;
+    right: 0%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
 #open-modal{
     background-color: #007bff;
+    font-size: 2rem;
+    font-weight: bold;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -44,11 +53,13 @@ button:hover{
     opacity: 1;
 
 }
+
 #fade, #modal{
     transition: 0.5s;
     opacity: 1;
     pointer-events: all;
 }
+
 #fade{
     position: fixed;
     top: 0;
@@ -65,7 +76,7 @@ button:hover{
     transform: translate(-50%, -50%);
     background-color: #fff;
     z-index: 10;
-    width: 500px;
+    width: 600px;
     max-width: 90%;
     padding: 1.2rem;
     border-radius: 0.5rem;
@@ -80,9 +91,10 @@ button:hover{
     padding-bottom: 1rem;
 }
 
-.modal-body p {
+.modal-body {
     margin-bottom: 1rem;
-    color: blue
+    display: flex;
+    justify-content: space-around;
 }
 
 #modal.hide,
@@ -104,6 +116,7 @@ button:hover{
     color: white;
     z-index: 1;
 }
+
 
 
 img{
