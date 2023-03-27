@@ -7,7 +7,12 @@ function valor(){
         document.getElementById('saldo').textContent = `escolha uma aposta`
     }else{
         var num3 = Number(document.getElementById("saldo").value);
-        document.getElementById("saldo").value = parseFloat(Number(select1.value) + num3).toFixed(2);
+        var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
+        if(saldoTotal != 0){
+
+        }else{
+            document.getElementById('result').textContent = `zero `
+        }
     }
     
     
