@@ -1,6 +1,7 @@
 var number = document.getElementById('insertNumber')
 const select1 =document.getElementById("select01");
 
+
 function valor(){
 
     if(Number(select1.value) == 0){
@@ -8,10 +9,10 @@ function valor(){
     }else{
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
-        if(saldoTotal != 0){
-
+        if(saldoTotal > 0){
         }else{
             document.getElementById('result').textContent = `zero `
+            document.getElementById("valorAposta").disabled = true;
         }
     }
     
