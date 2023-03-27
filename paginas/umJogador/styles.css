@@ -16,16 +16,26 @@ h2{
     margin-bottom: 1rem;
 }
 button{
-    padding: 0.6rem 1.2rem;
+    padding: 1.5rem;
+    width: 180px;
+    margin-top: 1rem;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
     opacity: 0.8;
-    font-size: 1rem;
+    font-size: 1.3rem;
     z-index: 5;
     transition: 0.4s;
+    border-radius: 10px;
+    font-weight: bold;
 }
+button:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
 
 #overlay {
 	position: absolute;
@@ -41,19 +51,8 @@ button{
     z-index: 1;
 }
 
-
-img{
-    height: 100%;
-    width:100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-  }
-  .stars{
-    background: transparent url('/img/stars.png') repeat;
+.stars{
+    background: black url('/img/stars.png') repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -64,18 +63,6 @@ img{
 }
 
 /* todo o modal */
-#close-modal{
-    background-color: transparent;
-    color: red;
-    top: 0;
-    right: 0%;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-#close-modal:hover{
-    transform: scale(1.5);
-}
-
 
 #open-modal{
     background-color: #007bff;
@@ -92,9 +79,7 @@ img{
     border-radius: 0.5rem;
     z-index: 5;
 }
-button:hover{
-    opacity: 1;
-}
+
 
 #fade, #modal{
     transition: 0.5s;
@@ -135,6 +120,14 @@ button:hover{
 
 .modal-body {
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+}
+.modal-footer {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: space-around;
 }
@@ -143,26 +136,6 @@ button:hover{
 #fade.hide {
     opacity: 0;
     pointer-events: none;
-}
-
-a {
-    padding: 1.5rem;
-    width: 180px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 1rem;
-    border-radius: 10px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.3rem;
-    font-weight: bold;
-    opacity: 0.8;
-}
-a:hover{
-    opacity: 1;
-    transition: 0.5s;
-    transform: scale(1.1);
 }
 
 
@@ -177,8 +150,15 @@ a:hover{
     top: 0;
     bottom: 0;
     z-index: 0;
+}
 
-    animation: animate 8.5s linear infinite;
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #E9920F, 0 0 70px #E9920F, 0 0 80px #E9920F, 0 0 100px #E9920F, 0 0 150px #27608b;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #E9920F, 0 0 35px #E9920F, 0 0 40px #E9920F, 0 0 50px #E9920F, 0 0 75px #E9920F;
+  }
 }
 
 @keyframes animate{
@@ -192,12 +172,3 @@ a:hover{
       opacity: 0;
     }
   }
-
-@keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #E9920F, 0 0 70px #E9920F, 0 0 80px #E9920F, 0 0 100px #E9920F, 0 0 150px #27608b;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #E9920F, 0 0 35px #E9920F, 0 0 40px #E9920F, 0 0 50px #E9920F, 0 0 75px #E9920F;
-  }
-}

@@ -12,23 +12,24 @@
     <div>
 
         <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
-            <img src="/img/lampada.jpg" alt="">
             <div class="stars"></div>
             <div class="clouds"></div>
     </div>
 
-   <button id="open-modal">Jogar</button>
-    <div id="fade" class="hide">
-        <div id="modal" class="hide">
+   
+        <div id="modal">
             <div class="modal-header">
-                <h2>Quantos Jogadores Desejam Jogar ?</h2>
-                <button id="close-modal">x</button>
+                <h2>GUESS WHICH NUMBER I AM THINKING From 1 TO 6</h2>
             </div>
             <div class="modal-body">
-               <a href="paginas/umJogador/umjogador.html"> 1 Jogador </a>
-               <a href="doisjogadores.html"> 2 Jogadores </a>
+                <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+                <input type="number"  >
+            </div>
+            <div class="modal-footer">
+                
+                <button >Apostar</button>
+                <button type="button" value="Click Here" id ='button' onclick="button()">Girar</button>
             </div>
         </div>
-    </div>
 </body>
 </html>
