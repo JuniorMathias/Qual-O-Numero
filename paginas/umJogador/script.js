@@ -3,12 +3,16 @@ const select1 = document.getElementById('select01')
 
 function valor(){
     let valorInicial = 100;
+
+
     if(Number(select1.value) == 0){
         document.getElementById('saldo').textContent = `escolha uma aposta`
     }else{
-        const res = valorInicial - select1.value;
+        let res = valorInicial - Number(select1.value);
+        valorInicial = res;
         document.getElementById('saldo').textContent = `seu saldo é ${res}`
     }
+    
     
 }
 
