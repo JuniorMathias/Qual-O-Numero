@@ -7,6 +7,7 @@
     <title>Qual o Número</title>
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
     <script type="text/javascript" src="script.js" defer></script>
+    
 </head>
 <body>
     <div>
@@ -20,7 +21,14 @@
         <div id="modal">
             <div class="modal-header">
                 <h2><p id="result"> </p></h2>
-                <h2><p id="saldo"> </p></h2>
+                <h2><p id="sald"> </p></h2>
+                
+                <div class="form-group"> <!-- Campo para mostrar resultado -->
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Saldo <small>(R$) </small><span class="required">*</span></label>
+                    <div class="col-md-3 col-sm-3 col-xs-12" id="saldo_total">
+                        <input type="text" class="form-control col-md-7 col-xs-12 decimal" name="saldo"  id="saldo" value="0" readonly>
+                    </div>
+                </div>
             </div>
             <div class="modal-body">
                 <select id="select01">
@@ -31,13 +39,19 @@
                     <option value="40">40</option>
                     <option value="50">50</option>
                 </select>
-                <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+                <div>
+
+                    <button type="button" class="minus-button merge-top-left-button btn-circle" data-dir="dwn" id="dwn">-</button>
+                    <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+                    <button type="button" class="plus-button merge-top-right-button btn-circle" data-dir="up" id="up">+</button>
+                </div>
+
                 <img src="/img/dados/dice1.png" alt="dado" id="face">
             </div>
             <div class="modal-footer">
-                <button type="button" id ='apostar' onclick="valor()">Valor</button>
-                <button type="button" id ='apostar' onclick="apostar()">Apostar</button>
-                <button type="button" id ='girar' onclick="girar()" disabled>Girar</button>
+                <button type="button" id ='apostar' class="botoes" onclick="valor()" >Valor</button>
+                <button type="button" id ='apostar' class="botoes"  onclick="apostar()">Apostar</button>
+                <button type="button" id ='girar'   class="botoes"  onclick="girar()" disabled>Girar</button>
             </div>
         </div>
 </body>

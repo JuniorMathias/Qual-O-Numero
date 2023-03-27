@@ -15,7 +15,7 @@ body{
 h2{
     margin-bottom: 1rem;
 }
-button{
+.botoes{
     padding: 1.5rem;
     width: 180px;
     margin-top: 1rem;
@@ -31,7 +31,7 @@ button{
     border-radius: 10px;
     font-weight: bold;
 }
-button:hover{
+.botoes:hover{
     opacity: 1;
     transition: 0.5s;
 }

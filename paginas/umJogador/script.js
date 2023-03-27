@@ -1,20 +1,18 @@
 var number = document.getElementById('insertNumber')
-const select1 = document.getElementById('select01')
+const select1 =document.getElementById("select01");
 
 function valor(){
-    let valorInicial = 100;
-
 
     if(Number(select1.value) == 0){
         document.getElementById('saldo').textContent = `escolha uma aposta`
     }else{
-        let res = valorInicial - Number(select1.value);
-        valorInicial = res;
-        document.getElementById('saldo').textContent = `seu saldo é ${res}`
+        var num3 = Number(document.getElementById("saldo").value);
+        document.getElementById("saldo").value = parseFloat(Number(select1.value) + num3).toFixed(2);
     }
     
     
 }
+
 
 function apostar(){
     if(number.value.length != 0){
