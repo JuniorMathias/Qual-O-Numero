@@ -10,6 +10,7 @@ function button(){
         document.getElementById('result').textContent = `How did you know ? I was thinking about the number ${randomNumber}`
         img.src = 'surprise.png'
     } else{
+        alert('You are wrong ')
         document.getElementById('result').textContent = `Come on try again, I was thinking about the number ${randomNumber}`
         img.src ='happy.png'
     }
