@@ -19,7 +19,7 @@
    
         <div id="modal">
             <div class="modal-header">
-                <h2>GUESS WHICH NUMBER I AM THINKING From 1 TO 6</h2>
+                <h2><p id="result"> </p></h2>
             </div>
             <div class="modal-body">
                 <input type="number" value="number" id="insertNumber" min="1" max="6"  >
@@ -27,8 +27,8 @@
             </div>
             <div class="modal-footer">
                 
-                <button type="button" id ='button' onclick="apostar()">Apostar</button>
-                <button type="button" id ='button' onclick="girar()">Girar</button>
+                <button type="button" id ='apostar' onclick="apostar()">Apostar</button>
+                <button type="button" id ='girar' onclick="girar()" disabled>Girar</button>
             </div>
         </div>
 </body>

@@ -24,20 +24,32 @@ function girar(){
         default:
     }
     if(number.value.length == 0){
-        alert('Choose the number')
         document.getElementById('result').textContent = `Choose The Number `
-    } else  if(randomNumber == number.value) {
-        alert('You are Right ')
+    }else if(randomNumber == number.value) {
+        document.getElementById('result').textContent = `acertou ${randomNumber}`
+        document.getElementById("insertNumber").disabled = false;
+        document.getElementById("girar").disabled = true;
+        number.value = '';
     } else{
-        alert('You are wrong  ' + randomNumber)
-        document.getElementById('result').textContent = `Come on try again, I was thinking about the number ${randomNumber}`
+        document.getElementById('result').textContent = `errou ${randomNumber}`
+        document.getElementById("insertNumber").disabled = false;
+        document.getElementById("girar").disabled = true;
+        number.value = '';
     }
+
+    if(number.value === ''){
+        document.getElementById("#girar").disabled = true;
+    }
+    return number.value.length = 0;
 }
 
 function apostar(){
-    let randomNumber = girar();
-    
-   
+    if(number.value.length != 0){
+        document.getElementById("insertNumber").disabled = true;
+        document.getElementById("girar").disabled = false;
+    }else{
+        document.getElementById('result').textContent = `Choose The Number `
+    }
 }
 
 
