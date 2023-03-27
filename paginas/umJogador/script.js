@@ -1,4 +1,26 @@
 var number = document.getElementById('insertNumber')
+const select1 = document.getElementById('select01')
+
+function valor(){
+    let valorInicial = 100;
+    if(Number(select1.value) == 0){
+        document.getElementById('saldo').textContent = `escolha uma aposta`
+    }else{
+        const res = valorInicial - select1.value;
+        document.getElementById('saldo').textContent = `seu saldo é ${res}`
+    }
+    
+}
+
+function apostar(){
+    if(number.value.length != 0){
+        document.getElementById("insertNumber").disabled = true;
+        document.getElementById("girar").disabled = false;
+    }else{
+        document.getElementById('result').textContent = `Choose The Number `
+    }
+}
+
 
 function girar(){
     var randomNumber = Math.floor(Math.random()*6) + 1
@@ -42,15 +64,3 @@ function girar(){
     }
     return number.value.length = 0;
 }
-
-function apostar(){
-    if(number.value.length != 0){
-        document.getElementById("insertNumber").disabled = true;
-        document.getElementById("girar").disabled = false;
-    }else{
-        document.getElementById('result').textContent = `Choose The Number `
-    }
-}
-
-
-

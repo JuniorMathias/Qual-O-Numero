@@ -20,13 +20,22 @@
         <div id="modal">
             <div class="modal-header">
                 <h2><p id="result"> </p></h2>
+                <h2><p id="saldo"> </p></h2>
             </div>
             <div class="modal-body">
+                <select id="select01">
+                    <option value="0"></option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
                 <input type="number" value="number" id="insertNumber" min="1" max="6"  >
                 <img src="/img/dados/dice1.png" alt="dado" id="face">
             </div>
             <div class="modal-footer">
-                
+                <button type="button" id ='apostar' onclick="valor()">Valor</button>
                 <button type="button" id ='apostar' onclick="apostar()">Apostar</button>
                 <button type="button" id ='girar' onclick="girar()" disabled>Girar</button>
             </div>
