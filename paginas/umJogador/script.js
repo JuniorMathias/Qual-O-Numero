@@ -1,21 +1,23 @@
 var number = document.getElementById('insertNumber')
 const select1 =document.getElementById("select01");
 
-
 function valor(){
 
     if(Number(select1.value) == 0){
         document.getElementById('saldo').textContent = `escolha uma aposta`
-        document.getElementById("insertNumber").disabled = true;
+        
     }else{
+
+        document.getElementById("apostar").disabled = false;
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
-        if(saldoTotal > 0){
-            document.getElementById("insertNumber").disabled = false;
-            }else{
-                document.getElementById('sald').textContent = `zero `
-                document.getElementById("valorAposta").disabled = true;
-            }
+
+        if(saldoTotal <= 0){
+            document.getElementById('sald').textContent = `zero `
+            document.getElementById("valorAposta").disabled = true;
+            document.getElementById("insertNumber").disabled = true;
+        }
+        
     }
     
     
@@ -56,22 +58,29 @@ function girar(){
             break;
         default:
     }
-    if(number.value.length == 0){
-        document.getElementById('result').textContent = `Choose The Number `
-    }else if(randomNumber == number.value) {
-        document.getElementById('result').textContent = `acertou ${randomNumber}`
-        document.getElementById("insertNumber").disabled = false;
-        document.getElementById("girar").disabled = true;
-        number.value = '';
-    } else{
-        document.getElementById('result').textContent = `errou ${randomNumber}`
-        document.getElementById("insertNumber").disabled = false;
-        document.getElementById("girar").disabled = true;
-        number.value = '';
-    }
 
-    if(number.value === ''){
-        document.getElementById("#girar").disabled = true;
-    }
+        if(number.value.length == 0){
+    
+            document.getElementById('result').textContent = `Choose The Number `
+    
+        }else if(randomNumber == number.value) {
+    
+            document.getElementById('result').textContent = `acertou ${randomNumber}`
+            document.getElementById("insertNumber").disabled = false;
+            document.getElementById("girar").disabled = true;
+    
+        } else{
+    
+            document.getElementById('result').textContent = `errou ${randomNumber}`
+            document.getElementById("insertNumber").disabled = false;
+            document.getElementById("girar").disabled = true;
+    
+            number.value = '';
+            select1.value = '';
+            
+        }
+    
+
+    
     return number.value.length = 0;
 }
