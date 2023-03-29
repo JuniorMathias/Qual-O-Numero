@@ -3,22 +3,22 @@ const select1 =document.getElementById("select01");
 
 function valor(){
 
-    if(Number(select1.value) == 0){
-        document.getElementById('saldo').textContent = `escolha uma aposta`
-        
-    }else{
-
+    if(Number(select1.value) != 0){
         document.getElementById("apostar").disabled = false;
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
+        if(saldoTotal < select1.value){
+            document.getElementById('salds').textContent = "sem saldo";
 
-        if(saldoTotal <= 0){
-            document.getElementById('sald').textContent = `zero `
-            document.getElementById("valorAposta").disabled = true;
-            document.getElementById("insertNumber").disabled = true;
         }
-        
-    }
+            if(saldoTotal <= 0){
+                document.getElementById('sald').textContent = `zero `
+                document.getElementById("valorAposta").disabled = true;
+                document.getElementById("insertNumber").disabled = true;
+            }
+        }else if(Number(select1.value) == 0){
+            document.getElementById('sald').textContent = `escolha uma aposta`
+        }
     
     
 }
