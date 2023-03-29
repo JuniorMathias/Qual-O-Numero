@@ -31,6 +31,7 @@ h2{
     border-radius: 10px;
     font-weight: bold;
 }
+.botoes:focus{ background-color: red; }
 .botoes:hover{
     opacity: 1;
     transition: 0.5s;

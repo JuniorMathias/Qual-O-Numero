@@ -6,14 +6,16 @@ function valor(){
 
     if(Number(select1.value) == 0){
         document.getElementById('saldo').textContent = `escolha uma aposta`
+        document.getElementById("insertNumber").disabled = true;
     }else{
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
         if(saldoTotal > 0){
-        }else{
-            document.getElementById('result').textContent = `zero `
-            document.getElementById("valorAposta").disabled = true;
-        }
+            document.getElementById("insertNumber").disabled = false;
+            }else{
+                document.getElementById('sald').textContent = `zero `
+                document.getElementById("valorAposta").disabled = true;
+            }
     }
     
     
@@ -21,6 +23,7 @@ function valor(){
 
 
 function apostar(){
+    
     if(number.value.length != 0){
         document.getElementById("insertNumber").disabled = true;
         document.getElementById("girar").disabled = false;
