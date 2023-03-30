@@ -23,11 +23,18 @@
                 <h2><p id="result"> </p></h2>
                 <h2><p id="sald"> </p></h2>
                 <h2><p id="salds"> </p></h2>
-                
-                <div class="form-group"> <!-- Campo para mostrar resultado -->
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Saldo <small>(R$) </small><span class="required">*</span></label>
-                    <div class="col-md-3 col-sm-3 col-xs-12" id="saldo_total">
-                        <input type="text" class="form-control col-md-7 col-xs-12 decimal" name="saldo"  id="saldo" value="100" readonly>
+            </div> 
+            <div class="modal-header" style="justify-content: space-around; display: flex;">
+                <div> <!-- Campo para mostrar resultado -->
+                    <label>Saldo <small>(R$) </small><span class="required">*</span></label>
+                    <div>
+                        <input type="text" name="saldo"  id="saldo" value="100" readonly>
+                    </div>
+                </div>
+                <div> 
+                    <label>Saldo <small>(R$) </small><span class="required">*</span></label>
+                    <div>
+                        <input type="text"name="saldo"  id="saldo" value="100" readonly>
                     </div>
                 </div>
             </div>
@@ -42,9 +49,9 @@
                 </select>
                 <div>
 
-                    <button type="button" class="minus-button merge-top-left-button btn-circle" data-dir="dwn" id="dwn">-</button>
+                    <button type="button" data-dir="dwn" id="dwn">-</button>
                     <input type="number" value="number" id="insertNumber" min="1" max="6"  >
-                    <button type="button" class="plus-button merge-top-right-button btn-circle" data-dir="up" id="up">+</button>
+                    <button type="button" data-dir="up" id="up">+</button>
                 </div>
 
                 <img src="/img/dados/dice1.png" alt="dado" id="face">

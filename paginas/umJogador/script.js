@@ -7,14 +7,13 @@ function valor(){
         document.getElementById("apostar").disabled = false;
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
-        if(saldoTotal < select1.value){
-            document.getElementById('salds').textContent = "sem saldo";
-
-        }
-            if(saldoTotal <= 0){
-                document.getElementById('sald').textContent = `zero `
+            if(saldoTotal < select1.value || saldoTotal <= 0){
+                document.getElementById('salds').textContent = "Saldo Insuficiente";
                 document.getElementById("valorAposta").disabled = true;
                 document.getElementById("insertNumber").disabled = true;
+
+            }else{
+                document.getElementById('salds').textContent = "";
             }
         }else if(Number(select1.value) == 0){
             document.getElementById('sald').textContent = `escolha uma aposta`
