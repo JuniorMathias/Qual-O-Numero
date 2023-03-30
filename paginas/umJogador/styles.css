@@ -63,14 +63,11 @@ h2{
     
 }
 
-#insertNumber {
+#select01, #insertNumber {
     width: 100px;
     height: 30px;
     border: none;
-    outline: none;
-    padding: 5px;
     border-radius: 5px;
-    margin: 0 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
     text-align: center;
     align-items: center;
@@ -126,6 +123,7 @@ h2{
 .modal-header{
     display: flex;
     justify-content: space-between;
+    height: 50px;
     align-items: center;
     border-bottom: 1px solid #ccc;
     margin-bottom: 1rem;

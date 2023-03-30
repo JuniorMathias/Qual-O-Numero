@@ -10,57 +10,54 @@
     
 </head>
 <body>
-    <div>
 
-        <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
-            <div class="stars"></div>
-            <div class="clouds"></div>
+    <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
+        <div class="stars"></div>
+        <div class="clouds"></div>
     </div>
 
-   
-        <div id="modal">
-            <div class="modal-header">
-                <h2><p id="result"> </p></h2>
-                <h2><p id="sald"> </p></h2>
-                <h2><p id="salds"> </p></h2>
-            </div> 
-            <div class="modal-header" style="justify-content: space-around; display: flex;">
-                <div> <!-- Campo para mostrar resultado -->
-                    <label>Saldo <small>(R$) </small><span class="required">*</span></label>
-                    <div>
-                        <input type="text" name="saldo"  id="saldo" value="100" readonly>
-                    </div>
-                </div>
-                <div> 
-                    <label>Saldo <small>(R$) </small><span class="required">*</span></label>
-                    <div>
-                        <input type="text"name="saldo"  id="saldo" value="100" readonly>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <select id="select01">
-                    <option value="0"></option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="40">40</option>
-                    <option value="50">50</option>
-                </select>
+
+    <div id="modal">
+        <div class="modal-header">
+            <h2><p id="result"> </p></h2>
+            <h2><p id="sald"> </p></h2>
+            <h2><p id="salds"> </p></h2>
+        </div> 
+        <div class="modal-header" style="justify-content: space-around; display: flex;">
+            <div> <!-- Campo para mostrar resultado -->
+                <label>Saldo <small>(R$) </small></label>
                 <div>
-
-                    <button type="button" data-dir="dwn" id="dwn">-</button>
-                    <input type="number" value="number" id="insertNumber" min="1" max="6"  >
-                    <button type="button" data-dir="up" id="up">+</button>
+                    <input type="text" name="saldo"  id="saldo" value="100" readonly>
                 </div>
-
-                <img src="/img/dados/dice1.png" alt="dado" id="face">
             </div>
-            <div class="modal-footer">
-                <button type="button" id ='valor' class="botoes" onclick="valor()" >Valor</button>
-                <button type="button" id ='apostar' class="botoes"  onclick="apostar()" disabled>Apostar</button>
-                <button type="button" id ='girar'   class="botoes"  onclick="girar()" disabled>Girar</button>
+            <div> 
+                <label>Tentativas</label>
+                <div>
+                    <input type="text" name="tentativas"  id="tentativas" value="0" readonly>
+                </div>
             </div>
         </div>
+        <div class="modal-body">
+            <select id="select01">
+                <option value="0"></option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+            <div>
+
+                <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+            </div>
+
+            <img src="/img/dados/dice1.png" alt="dado" id="face">
+        </div>
+        <div class="modal-footer">
+            <button type="button" id ='valor' class="botoes" onclick="valor()" >Valor</button>
+            <button type="button" id ='apostar' class="botoes"  onclick="apostar()" disabled>Apostar</button>
+            <button type="button" id ='girar'   class="botoes"  onclick="girar()" disabled>Girar</button>
+        </div>
+    </div>
 </body>
 </html>
