@@ -11,17 +11,20 @@ function valor(){
         document.getElementById("apostar").disabled = false;
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
-            if(saldoTotal < select1.value || saldoTotal <= 0){
+
+            document.getElementById('valor').disabled = true;
+
+            if(saldoTotal < select1.value || saldoTotal == 0){
                 document.getElementById('salds').textContent = "Saldo Insuficiente";
                 document.getElementById("valorAposta").disabled = true;
                 document.getElementById("insertNumber").disabled = true;
 
-            }else{
-                document.getElementById('salds').textContent = "";
+            } else{
+                document.getElementById('sald').textContent = "";
             }
         }else if(Number(select1.value) == 0){
-            document.getElementById('sald').textContent = `escolha uma aposta`
-        }
+        document.getElementById('sald').textContent = `escolha uma aposta`
+    }
     
     
 }
@@ -31,6 +34,7 @@ function apostar(){
     
     if(number.value.length != 0){
         document.getElementById("girar").disabled = false;
+        document.getElementById('result').textContent = ` `
     }else{
         document.getElementById('result').textContent = `Choose The Number `
     }
@@ -71,13 +75,15 @@ function girar(){
             document.getElementById("insertNumber").disabled = false;
             botaoAposta.disabled = true;
             document.getElementById("girar").disabled = true;
+             document.getElementById('valor').disabled = false;
     
         } else{
     
             document.getElementById('result').textContent = `errou ${randomNumber}`
-            document.getElementById("insertNumber").disabled = false;
+            number.disabled = false;
             botaoAposta.disabled = true;
             document.getElementById("girar").disabled = true;
+            document.getElementById('valor').disabled = false;
     
             number.value = '';
             select1.value = '';
