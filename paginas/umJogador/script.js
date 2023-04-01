@@ -1,9 +1,14 @@
-const select1 =document.getElementById("select01");
+let select1 =document.getElementById("select01");
+let girarDado = document.getElementById("girar");
 
 let botaoAposta = document.getElementById("apostar");
 
 let dado = document.getElementById('face');
-var number = document.getElementById('insertNumber')
+var number = document.getElementById('insertNumber');
+let mostrarMensagem = document.getElementById('result');
+let msgAposta = document.getElementById('result');
+let saldoInsuficiente = document.getElementById('salds');
+let valorAposta = document.getElementById('valor');
 
 function valor(){
 
@@ -12,18 +17,18 @@ function valor(){
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
 
-            document.getElementById('valor').disabled = true;
+            valorAposta.disabled = true;
 
             if(saldoTotal < select1.value || saldoTotal == 0){
-                document.getElementById('salds').textContent = "Saldo Insuficiente";
+                saldoInsuficiente.textContent = "Saldo Insuficiente";
                 document.getElementById("valorAposta").disabled = true;
-                document.getElementById("insertNumber").disabled = true;
+                number.disabled = true;
 
             } else{
-                document.getElementById('sald').textContent = "";
+                msgAposta.textContent = "";
             }
         }else if(Number(select1.value) == 0){
-        document.getElementById('sald').textContent = `escolha uma aposta`
+        msgAposta.textContent = `escolha uma aposta`
     }
     
     
@@ -33,10 +38,10 @@ function valor(){
 function apostar(){
     
     if(number.value.length != 0){
-        document.getElementById("girar").disabled = false;
-        document.getElementById('result').textContent = ` `
+        girarDado.disabled = false;
+        mostrarMensagem.textContent = ` `
     }else{
-        document.getElementById('result').textContent = `Choose The Number `
+        mostrarMensagem.textContent = `Choose The Number `
     }
 }
 
@@ -67,23 +72,23 @@ function girar(){
 
         if(number.value.length == 0){
     
-            document.getElementById('result').textContent = `Choose The Number `
+            mostrarMensagem.textContent = `Choose The Number `
     
         }else if(randomNumber == number.value) {
     
-            document.getElementById('result').textContent = `acertou ${randomNumber}`
+            mostrarMensagem.textContent = `acertou ${randomNumber}`
             document.getElementById("insertNumber").disabled = false;
             botaoAposta.disabled = true;
-            document.getElementById("girar").disabled = true;
-             document.getElementById('valor').disabled = false;
+            girarDado.disabled = true;
+             valorAposta.disabled = false;
     
         } else{
     
-            document.getElementById('result').textContent = `errou ${randomNumber}`
+            mostrarMensagem.textContent = `errou ${randomNumber}`
             number.disabled = false;
             botaoAposta.disabled = true;
-            document.getElementById("girar").disabled = true;
-            document.getElementById('valor').disabled = false;
+            girarDado.disabled = true;
+            valorAposta.disabled = false;
     
             number.value = '';
             select1.value = '';

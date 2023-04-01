@@ -91,7 +91,6 @@ h2{
     z-index: 5;
 }
 
-
 #fade, #modal{
     transition: 0.5s;
     opacity: 1;
@@ -129,6 +128,10 @@ h2{
     margin-bottom: 1rem;
     padding-bottom: 1rem;
 }
+label{
+    color: #007bff;
+    font-weight: bold;
+}
 
 .modal-body {
     margin-bottom: 1rem;
@@ -152,9 +155,12 @@ h2{
     opacity: 0;
     pointer-events: none;
 }
-
-
-
+#result, #sald, #salds{
+    font-size: 20px;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+    color: black;
+    transition: 0.5s;
+}
 .clouds{
 	width:10000px;
 	height: 100%;
@@ -176,6 +182,15 @@ h2{
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #E9920F, 0 0 35px #E9920F, 0 0 40px #E9920F, 0 0 50px #E9920F, 0 0 75px #E9920F;
   }
 }
+@keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #007bff, 0 0 70px #007bff, 0 0 80px #007bff, 0 0 100px #007bff, 0 0 150px #27608b;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #007bff, 0 0 35px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 75px #E9920F;
+    }
+  }
+  
 
 @keyframes animate{
     0%{
