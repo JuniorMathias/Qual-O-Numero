@@ -62,7 +62,18 @@ h2{
     display: block;
     
 }
-
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("/img/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    animation: animate 8.5s linear infinite;
+}
 #select01, #insertNumber {
     width: 100px;
     height: 30px;
@@ -118,6 +129,18 @@ h2{
     padding: 1.2rem;
     border-radius: 0.5rem;
 }
+#imgErrar{
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 400px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    animation: animate 1.0s linear infinite;
+}
 
 .modal-header{
     display: flex;
@@ -161,18 +184,7 @@ label{
     color: black;
     transition: 0.5s;
 }
-.clouds{
-	width:10000px;
-	height: 100%;
-	background: transparent url("/img/clouds_repeat.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-    animation: animate 8.5s linear infinite;
-}
+
 
 @keyframes neon1 {
   from {
