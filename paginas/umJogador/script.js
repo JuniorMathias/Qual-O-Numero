@@ -21,13 +21,11 @@ function valor(){
         valorAposta.disabled = true;
         botaoAposta.disabled = false;
         flork.src = "";
+        
         // desabilita as opções de select1 com valor maior que o saldoTotal
             for (var i = 0; i < select1.options.length; i++) {
                 var optionValue = Number(select1.options[i].value);
                 if (optionValue > saldoTotal) {
-                    if(optionValue == 1){
-                        
-                    }
                   select1.options[i].disabled = true;
                 } else {
                   select1.options[i].disabled = false;
@@ -41,8 +39,8 @@ function valor(){
             } else{
                 msgAposta.textContent = "";
             }
-        }else if(Number(select1.value) == 0){
-        msgAposta.textContent = `Escolha um valor para Apostar.`
+    }else if(Number(select1.value) == 0){
+    msgAposta.textContent = `Escolha um valor para Apostar.`
     }
     
     
@@ -60,9 +58,10 @@ function updateDisplay(val) {
         flork.src = "/img/gameover.png";
         break;
     case 4:
-        flork.src = "/img/errou.png";
+        flork.src = "/img/aposte.png";
         break;
     default:
+        flork.src = "/img/errou.png";
 }
 }
 
@@ -72,7 +71,7 @@ function apostar(){
         girarDado.disabled = false;
         mostrarMensagem.textContent = ` `
     }else{
-        mostrarMensagem.textContent = `Choose The Number `
+        mostrarMensagem.textContent = `Escolha um número para adivinhar `
     }
 }
 
@@ -104,16 +103,20 @@ function girar(){
 
         if(number.value.length == 0){
     
-            mostrarMensagem.textContent = `Choose The Number `
+            mostrarMensagem.textContent = `Escolha um número para adivinhar `
     
         }else if(randomNumber == number.value) {
     
             mostrarMensagem.textContent = `acertou ${randomNumber}`
-            document.getElementById("insertNumber").disabled = false;
+            document.getElementById("counter-label").innerHTML = 0;
+            number.disabled = false;
+            document.getElementById("saldo").value = 100;
             flork.src = "/img/acertou.png";
             botaoAposta.disabled = true;
             girarDado.disabled = true;
-             valorAposta.disabled = false;
+            valorAposta.disabled = false;
+            number.value = '';
+            select1.value = '';
     
         } else{
     
