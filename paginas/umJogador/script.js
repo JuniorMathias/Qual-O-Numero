@@ -30,7 +30,7 @@ function valor(){
                 } else {
                   select1.options[i].disabled = false;
                 }
-              }
+            }
 
             if(saldoTotal == 0){
                 saldoInsuficiente.textContent = "Saldo Insuficiente";
@@ -40,11 +40,15 @@ function valor(){
                 msgAposta.textContent = "";
             }
     }else if(Number(select1.value) == 0){
-    msgAposta.textContent = `Escolha um valor para Apostar.`
+        msgAposta.textContent = `Escolha um valor para Apostar.`
     }
     
     
 }
+
+
+//função para mostrar as tentativas
+
 function updateDisplay(val) {
    let contar = document.getElementById("counter-label").innerHTML = val;
    switch(contar){
@@ -65,6 +69,8 @@ function updateDisplay(val) {
 }
 }
 
+//função para mostrar o número da aposta
+
 function apostar(){
     
     if(number.value.length != 0){
@@ -75,6 +81,7 @@ function apostar(){
     }
 }
 
+//função para mostrar a face do dado 
 
 function girar(){
     var randomNumber = Math.floor(Math.random()*6) + 1
@@ -107,10 +114,12 @@ function girar(){
     
         }else if(randomNumber == number.value) {
     
+            let saldoAtual = parseFloat(document.getElementById("saldo").value);
             mostrarMensagem.textContent = `acertou ${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
             number.disabled = false;
-            document.getElementById("saldo").value = 100;
+            saldoAtual += parseFloat(select1.value);
+            document.getElementById("saldo").value = saldoAtual.toFixed(2);
             flork.src = "/img/acertou.png";
             botaoAposta.disabled = true;
             girarDado.disabled = true;
