@@ -7,7 +7,6 @@ let dado = document.getElementById('face');
 var number = document.getElementById('insertNumber');
 let mostrarMensagem = document.getElementById('result');
 let msgAposta = document.getElementById('result');
-let saldoInsuficiente = document.getElementById('salds');
 let valorAposta = document.getElementById('valor');
 let flork = document.getElementById('imgErrar');
 var counterVal = 0;
@@ -33,7 +32,6 @@ function valor(){
             }
 
             if(saldoTotal == 0){
-                saldoInsuficiente.textContent = "Saldo Insuficiente";
                 document.getElementById("valorAposta").disabled = true;
                 number.disabled = true;
             } else{
@@ -115,21 +113,21 @@ function girar(){
         }else if(randomNumber == number.value) {
     
             let saldoAtual = parseFloat(document.getElementById("saldo").value);
-            mostrarMensagem.textContent = `acertou ${randomNumber}`
+            mostrarMensagem.textContent = `Parabéns você Acertou ${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
-            number.disabled = false;
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
             flork.src = "/img/acertou.png";
             botaoAposta.disabled = true;
             girarDado.disabled = true;
+            number.disabled = false;
             valorAposta.disabled = false;
             number.value = '';
             select1.value = '';
     
         } else{
     
-            mostrarMensagem.textContent = `errou ${randomNumber}`
+            mostrarMensagem.textContent = `Você errou, apostou no número ${number.value} e o número sorteado foi ${randomNumber}`
            
             number.disabled = false;
             botaoAposta.disabled = true;

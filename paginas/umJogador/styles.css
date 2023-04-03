@@ -178,11 +178,12 @@ label{
     opacity: 0;
     pointer-events: none;
 }
-#result, #sald, #salds{
+#result, #sald{
     font-size: 20px;
     animation: neon2 1.5s ease-in-out infinite alternate;
     color: black;
     transition: 0.5s;
+    justify-content: center;
 }
 
 
