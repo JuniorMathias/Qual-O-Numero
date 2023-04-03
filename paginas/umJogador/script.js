@@ -118,7 +118,7 @@ function girar(){
             mostrarMensagem.textContent = `acertou ${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
             number.disabled = false;
-            saldoAtual += parseFloat(select1.value);
+            saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
             flork.src = "/img/acertou.png";
             botaoAposta.disabled = true;
