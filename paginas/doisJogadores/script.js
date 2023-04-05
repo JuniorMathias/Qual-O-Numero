@@ -48,6 +48,7 @@ function valor(){
             }
 
             if(saldoTotal == 0){
+                atualizar.style.display = 'block';
                 document.getElementById("valorAposta").disabled = true;
                 number.disabled = true;
             } else{
@@ -115,6 +116,7 @@ function girar(){
             let saldoAtual = parseFloat(document.getElementById("saldo").value);
             mostrarMensagem.textContent = `Jogador 1 Acertou com o número${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
+            atualizar.style.display = 'block';
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
             botaoAposta.disabled = true;
@@ -163,6 +165,7 @@ function valor2(){
             }
 
             if(saldoTotal == 0){
+                atualizar.style.display = 'block';
                 document.getElementById("valorAposta").disabled = true;
                 number.disabled = true;
             } else{
@@ -227,6 +230,7 @@ function girar2(){
             let saldoAtual = parseFloat(document.getElementById("saldo2").value);
             mostrarMensagem2.textContent = `Jogador 2 Acertou com o número ${randomNumber}`
             document.getElementById("counter-label2").innerHTML = 0;
+            atualizar.style.display = 'block';
             saldoAtual += parseFloat(select2.value) + parseFloat(select2.value);
             document.getElementById("saldo2").value = saldoAtual.toFixed(2);
             botaoAposta2.disabled = true;

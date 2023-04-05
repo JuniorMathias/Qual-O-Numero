@@ -15,7 +15,7 @@ body{
 h2{
     margin-bottom: 1rem;
 }
-.botoes{
+.botoes, #btn{
     padding: 1.5rem;
     width: 180px;
     margin-top: 1rem;
@@ -117,6 +117,13 @@ h2{
     background-color: rgba(0,0,0,0.6);
     z-index: 5;
 }
+#btns{
+    position: fixed;
+    z-index: 10;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
 #modal0{
     position: fixed;
     top: 50%;
@@ -153,6 +160,10 @@ h2{
     max-width: 90%;
     padding: 1.2rem;
     border-radius: 0.5rem;
+}
+#modal0{
+    display: flex;
+    justify-content: center;
 }
 #imgErrar{
     position: fixed;
@@ -203,10 +214,7 @@ label{
     opacity: 0;
     pointer-events: none;
 }
-#modal0{
-    display: flex;
-    justify-content: center;
-}
+
 #result, #sald,#result2, #sald2{
     text-transform: uppercase;
     font-size: 20px;

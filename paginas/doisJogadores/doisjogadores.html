@@ -21,7 +21,6 @@
             <h2><p id="jogador"> JOGADOR 1</p></h2>
         </div> 
     </div>
-
     <div id="modal">
         <div class="modal-header">
             <h2><p id="result"> </p></h2>
@@ -106,5 +105,9 @@
             <button type="button" id ='girar2'   class="botoes"  onclick="girar2()" disabled>Girar</button>
         </div>
     </div>
-</body>
+    <div id="btns">
+        <button type="button" id ='btn' class="btn" style="z-index: 10;margin-top: 10%; background-color: red;" onClick="history.go(-1);">Voltar</button>
+        <button type="button" id ='atualizar' class="botoes" style="background-color: red; display: none;z-index: 10;" onClick="window.location.reload()"  >Jogar Novamente</button>
+    </div>
+    </body>
 </html>
