@@ -35,7 +35,7 @@ function valor(){
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
         valorAposta.disabled = true;
         botaoAposta.disabled = false;
-        flork.src = "";
+        mostrarMensagem2.textContent = ``
         
         // desabilita as opções de select1 com valor maior que o saldoTotal
             for (var i = 0; i < select1.options.length; i++) {
@@ -54,7 +54,7 @@ function valor(){
                 mostrarMensagem.textContent = "";
             }
     }else if(Number(select1.value) == 0){
-        mostrarMensagem.textContent = `Escolha um valor para Apostar.`
+        mostrarMensagem.textContent = `ESCOLHA UM VALOR PARA APOSTAR.`
     }
 }
 
@@ -79,6 +79,9 @@ function apostar(){
 //função para mostrar a face do dado 
 
 function girar(){
+    if(valorAposta.disabled){
+        jogador.textContent = `Jogador 2`
+    }
     var randomNumber = Math.floor(Math.random()*6) + 1
     updateDisplay(++counterVal);
     switch(randomNumber){
@@ -110,7 +113,7 @@ function girar(){
         }else if(randomNumber == number.value) {
     
             let saldoAtual = parseFloat(document.getElementById("saldo").value);
-            mostrarMensagem.textContent = `Parabéns você Acertou ${randomNumber}`
+            mostrarMensagem.textContent = `Jogador 1 Acertou com o número${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
@@ -124,7 +127,7 @@ function girar(){
     
         } else{
     
-            mostrarMensagem.textContent = `Você errou, apostou no número ${number.value} e o número sorteado foi ${randomNumber}`
+            mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o nº sorteado foi ${randomNumber}`
            
             number.disabled = false;
             botaoAposta.disabled = true;
@@ -141,12 +144,13 @@ function girar(){
 // jogador número dois
 
 function valor2(){
-
+   
     if(Number(select2.value) != 0){
         var num3 = Number(document.getElementById("saldo2").value);
         var saldoTotal = document.getElementById("saldo2").value = parseFloat(num3 - Number(select2.value)).toFixed(2);
         valorAposta2.disabled = true;
         botaoAposta2.disabled = false;
+        mostrarMensagem.textContent = ``
         
         // desabilita as opções de select1 com valor maior que o saldoTotal
             for (var i = 0; i < select2.options.length; i++) {
@@ -187,6 +191,9 @@ function updateDisplay2(val) {
 }
 
 function girar2(){
+    if(valorAposta2.disabled){
+        jogador.textContent = `Jogador 1`
+    }
     var randomNumber = Math.floor(Math.random()*6) + 1
     updateDisplay2(++counterVal2);
     switch(randomNumber){
@@ -218,7 +225,7 @@ function girar2(){
         }else if(randomNumber == number2.value) {
     
             let saldoAtual = parseFloat(document.getElementById("saldo2").value);
-            mostrarMensagem2.textContent = `Parabéns você Acertou ${randomNumber}`
+            mostrarMensagem2.textContent = `Jogador 2 Acertou com o número ${randomNumber}`
             document.getElementById("counter-label2").innerHTML = 0;
             saldoAtual += parseFloat(select2.value) + parseFloat(select2.value);
             document.getElementById("saldo2").value = saldoAtual.toFixed(2);
@@ -232,7 +239,7 @@ function girar2(){
     
         } else{
     
-            mostrarMensagem2.textContent = `Você errou, apostou no número ${number2.value} e o número sorteado foi ${randomNumber}`
+            mostrarMensagem2.textContent = `ERROU! apostou no nº ${number2.value} e o número sorteado foi ${randomNumber}`
            
             number2.disabled = false;
             botaoAposta2.disabled = true;
@@ -247,9 +254,3 @@ function girar2(){
 }
 
 // vez do jogador
-
-if(valorAposta2 && botaoAposta2 && girarDado2){
-    jogador.textContent = `Jogador 1`
-}else if(valorAposta.disabled && botaoAposta.disabled  && girarDado.disabled){
-    jogador.textContent = `Jogador 2`
-}
