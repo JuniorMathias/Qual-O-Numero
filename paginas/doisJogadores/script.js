@@ -1,7 +1,7 @@
 //inputs
 
 let select1 =document.getElementById("select01");
-var number = document.getElementById('insertNumber1');
+var number = document.getElementById('insertNumber');
 let dado = document.getElementById('face');
 
 let select2 =document.getElementById("select02");
@@ -116,7 +116,8 @@ function girar(){
             botaoAposta.disabled = true;
             girarDado.disabled = true;
             number.disabled = false;
-            valorAposta.disabled = false;
+            valorAposta.disabled = true;
+            valorAposta2.disabled = false;
             number.value = '';
             select1.value = '';
     
@@ -127,7 +128,8 @@ function girar(){
             number.disabled = false;
             botaoAposta.disabled = true;
             girarDado.disabled = true;
-            valorAposta.disabled = false;
+            valorAposta.disabled = true;
+            valorAposta2.disabled = false;
             number.value = '';
             select1.value = '';
             
@@ -233,8 +235,9 @@ function girar2(){
             number2.disabled = false;
             botaoAposta2.disabled = true;
             girarDado2.disabled = true;
-            valorAposta2.disabled = false;
-            number.value = '';
+            valorAposta.disabled = false;
+            valorAposta2.disabled = true;
+            number2.value = '';
             select2.value = '';
             
         }
