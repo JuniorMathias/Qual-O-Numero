@@ -1,3 +1,5 @@
+// criando variaveis para utilizar globalmente
+
 let select1 =document.getElementById("select01");
 let girarDado = document.getElementById("girar");
 
@@ -9,11 +11,13 @@ let mostrarMensagem = document.getElementById('result');
 let msgAposta = document.getElementById('result');
 let valorAposta = document.getElementById('valor');
 let flork = document.getElementById('imgErrar');
+let atualizar = document.getElementById('atualizar');
 var counterVal = 0;
 
-
+// criando a função valor do primeiro botão 
 function valor(){
 
+    //condicional para pegar valor do select e subtrair ao valor total e deixar o campo aposta clicavel
     if(Number(select1.value) != 0){
         var num3 = Number(document.getElementById("saldo").value);
         var saldoTotal = document.getElementById("saldo").value = parseFloat(num3 - Number(select1.value)).toFixed(2);
@@ -32,6 +36,7 @@ function valor(){
             }
 
             if(saldoTotal == 0){
+                atualizar.style.display = 'block';
                 document.getElementById("valorAposta").disabled = true;
                 number.disabled = true;
             } else{
@@ -113,7 +118,7 @@ function girar(){
         }else if(randomNumber == number.value) {
     
             let saldoAtual = parseFloat(document.getElementById("saldo").value);
-            mostrarMensagem.textContent = `Parabéns você Acertou ${randomNumber}`
+            mostrarMensagem.textContent = `Parabéns você Acertou!!! nº  ${randomNumber}`
             document.getElementById("counter-label").innerHTML = 0;
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
@@ -127,7 +132,7 @@ function girar(){
     
         } else{
     
-            mostrarMensagem.textContent = `Você errou, apostou no número ${number.value} e o número sorteado foi ${randomNumber}`
+            mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o nº sorteado foi ${randomNumber}`
            
             number.disabled = false;
             botaoAposta.disabled = true;

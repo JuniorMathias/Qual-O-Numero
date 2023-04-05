@@ -15,7 +15,7 @@ body{
 h2{
     margin-bottom: 1rem;
 }
-.botoes{
+.botoes, #btn{
     padding: 1.5rem;
     width: 180px;
     margin-top: 1rem;
