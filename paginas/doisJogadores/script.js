@@ -21,6 +21,7 @@ let girarDado2 = document.getElementById("girar2");
 // mostrar mensagem de resultados
 let mostrarMensagem = document.getElementById('result');
 let mostrarMensagem2 = document.getElementById('result2');
+let jogador = document.getElementById('jogador');
 
 //contador de tentativas
 var counterVal = 0;
@@ -224,7 +225,8 @@ function girar2(){
             botaoAposta2.disabled = true;
             girarDado2.disabled = true;
             number2.disabled = false;
-            valorAposta2.disabled = false;
+            valorAposta.disabled = false;
+            valorAposta2.disabled = true;
             number2.value = '';
             select2.value = '';
     
@@ -242,4 +244,12 @@ function girar2(){
             
         }
     return number2.value.length = 0;
+}
+
+// vez do jogador
+
+if(valorAposta2 && botaoAposta2 && girarDado2){
+    jogador.textContent = `Jogador 1`
+}else if(valorAposta.disabled && botaoAposta.disabled  && girarDado.disabled){
+    jogador.textContent = `Jogador 2`
 }
