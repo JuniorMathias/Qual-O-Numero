@@ -74,7 +74,7 @@ h2{
     z-index: 0;
     animation: animate 8.5s linear infinite;
 }
-#select01, #insertNumber {
+#select01, #insertNumber,#select02, #insertNumber2 {
     width: 100px;
     height: 30px;
     border: none;
@@ -121,7 +121,7 @@ h2{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(10%, -50%);
+    transform: translate(-100%, -50%);
     background-color: #fff;
     z-index: 10;
     width: 600px;
@@ -133,7 +133,7 @@ h2{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-100%, -50%);
+    transform: translate(10%, -50%);
     background-color: #fff;
     z-index: 10;
     width: 600px;

@@ -14,7 +14,6 @@
     <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
         <div class="stars"></div>
         <div class="clouds"></div>
-        <img src="" alt="" id="imgErrar">
     </div>
 
 
@@ -37,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
+        
         <div class="modal-body">
             <select id="select01">
                 <option value="0"></option>
@@ -60,28 +59,28 @@
             <button type="button" id ='girar'   class="botoes"  onclick="girar()" disabled>Girar</button>
         </div>
     </div>
-    <div id="overlay"><h1>CONSEGUE ACERTAR?</h1></div>
+    
     <div id="modal2">
         <div class="modal-header">
-            <h2><p id="result"> </p></h2>
-            <h2><p id="sald"> </p></h2>
+            <h2><p id="result2"> </p></h2>
+            <h2><p id="sald2"> </p></h2>
         </div> 
         <div class="modal-header" style="justify-content: space-between; display: flex;">
             <div> <!-- Campo para mostrar resultado -->
                 <label>Saldo <small>(R$) </small></label>
                 <div>
-                    <input type="text" name="saldo"  id="saldo" value="100" readonly>
+                    <input type="text" name="saldo2"  id="saldo2" value="100" readonly>
                 </div>
             </div>
             <div> 
                 <label>Tentativas</label>
                 <div>
-                    <h3 id="counter-label" style="padding-left: 30%;">0</h3>
+                    <h3 id="counter-label2" style="padding-left: 30%;">0</h3>
                 </div>
             </div>
         </div>
         <div class="modal-body">
-            <select id="select01">
+            <select id="select02">
                 <option value="0"></option>
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -91,15 +90,15 @@
             </select>
             <div>
 
-                <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+                <input type="number" value="number" id="insertNumber2" min="1" max="6"  >
             </div>
 
-            <img src="/img/dados/dice1.png" alt="dado" id="face">
+            <img src="/img/dados/dice1.png" alt="dado" id="face2">
         </div>
         <div class="modal-footer">
-            <button type="button" id ='valor' class="botoes" onclick="valor()" >Valor</button>
-            <button type="button" id ='apostar' class="botoes"  onclick="apostar()" disabled>Apostar</button>
-            <button type="button" id ='girar'   class="botoes"  onclick="girar()" disabled>Girar</button>
+            <button type="button" id ='valor2' class="botoes" onclick="valor2()" >Valor</button>
+            <button type="button" id ='apostar2' class="botoes"  onclick="apostar2()" disabled>Apostar</button>
+            <button type="button" id ='girar2'   class="botoes"  onclick="girar2()" disabled>Girar</button>
         </div>
     </div>
 </body>
