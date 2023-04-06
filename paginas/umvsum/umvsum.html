@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o Número</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <script type="text/javascript" src="script.js" defer></script>
+    
+</head>
+<body>
+
+    <div id="overlay"><h1>CONSEGUEM ACERTAR?</h1></div>
+        <div class="stars"></div>
+        <div class="clouds"></div>
+    </div>
+
+    <div id="modal0">
+            <img src="/img/dados/dice1.png" alt="dado" id="face">
+            <button type="button" id ='girar2'   class="botoes"  onclick="girar2()" disabled>Girar</button>
+    </div>
+    <div id="modal">
+        <div class="modal-header">
+            <h2><p id="result"> </p></h2>
+            <h2><p id="sald"> </p></h2>
+        </div> 
+        <div class="modal-header" style="justify-content: space-between; display: flex;">
+            <div> <!-- Campo para mostrar resultado -->
+                <label>Saldo <small>(R$) </small></label>
+                <div>
+                    <input type="text" name="saldo"  id="saldo" value="100" readonly>
+                </div>
+            </div>
+            <div> 
+                <label>Tentativas</label>
+                <div>
+                    <h3 id="counter-label" style="padding-left: 30%;">0</h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-body">
+            <select id="select01">
+                <option value="0"></option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+            <div>
+
+                <input type="number" value="number" id="insertNumber" min="1" max="6"  >
+            </div>
+
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" id ='valor' class="botoes" onclick="valor()" >Valor</button>
+            <button type="button" id ='apostar' class="botoes"  onclick="apostar()" disabled>Apostar</button>
+           
+        </div>
+    </div>
+    
+    <div id="modal2">
+        <div class="modal-header">
+            <h2><p id="result2"> </p></h2>
+            <h2><p id="sald2"> </p></h2>
+        </div> 
+        <div class="modal-header" style="justify-content: space-between; display: flex;">
+            <div> <!-- Campo para mostrar resultado -->
+                <label>Saldo <small>(R$) </small></label>
+                <div>
+                    <input type="text" name="saldo2"  id="saldo2" value="100" readonly>
+                </div>
+            </div>
+            <div> 
+                <label>Tentativas</label>
+                <div>
+                    <h3 id="counter-label2" style="padding-left: 30%;">0</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <select id="select02">
+                <option value="0"></option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+            <div>
+
+                <input type="number" value="number" id="insertNumber2" min="1" max="6"  >
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id ='valor2' class="botoes" onclick="valor2()" disabled >Valor</button>
+            <button type="button" id ='apostar2' class="botoes"  onclick="apostar2()" disabled>Apostar</button>
+        </div>
+    </div>
+    <div id="btns">
+        <button type="button" id ='btn' class="btn" style="z-index: 10;margin-top: 10%; background-color: red;" onClick="history.go(-1);">Voltar</button>
+        <button type="button" id ='atualizar' class="botoes" style="background-color: red; display: none;z-index: 10;" onClick="window.location.reload()"  >Jogar Novamente</button>
+    </div>
+    </body>
+</html>

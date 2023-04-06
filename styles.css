@@ -25,6 +25,7 @@ button{
     font-size: 1rem;
     z-index: 5;
     transition: 0.4s;
+    text-transform: uppercase;
 }
 
 #overlay {
@@ -41,6 +42,7 @@ button{
     z-index: 1;
 }
 
+/* imagens de backgroun */
 
 img{
     height: 100%;
@@ -52,6 +54,7 @@ img{
     right: 0;
     display: block;
   }
+
   .stars{
     background: transparent url('/img/stars.png') repeat;
     position: absolute;
@@ -61,6 +64,20 @@ img{
     right: 0;
     display: block;
     
+}
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("/img/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+
+    animation: animate 4.5s linear infinite;
 }
 
 /* todo o modal */
@@ -165,22 +182,7 @@ a:hover{
     transform: scale(1.1);
 }
 
-
-
-.clouds{
-	width:10000px;
-	height: 100%;
-	background: transparent url("/img/clouds_repeat.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-
-    animation: animate 8.5s linear infinite;
-}
-
+/* keyframes */
 @keyframes animate{
     0%{
       opacity: 0;
