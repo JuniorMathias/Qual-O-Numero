@@ -156,39 +156,6 @@ function girar(){
 
     // alterar aqui
 
-        if(number.value.length == 0){
-    
-            mostrarMensagem.textContent = `Escolha um número para adivinhar `
-    
-        }else if(randomNumber == number.value) {
-    
-            let saldoAtual = parseFloat(document.getElementById("saldo").value);
-            mostrarMensagem.textContent = `Jogador 1 Acertou com o número${randomNumber}`
-            document.getElementById("counter-label").innerHTML = 0;
-            atualizar.style.display = 'block';
-            saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
-            document.getElementById("saldo").value = saldoAtual.toFixed(2);
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            number.disabled = false;
-            valorAposta.disabled = true;
-            valorAposta2.disabled = false;
-            number.value = '';
-            select1.value = '';
-    
-        } else{
-    
-            mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o nº sorteado foi ${randomNumber}`
-           
-            number.disabled = false;
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            valorAposta.disabled = true;
-            valorAposta2.disabled = false;
-            number.value = '';
-            select1.value = '';
-            
-        }
-    return number.value.length = 0;
+       
 }
 
