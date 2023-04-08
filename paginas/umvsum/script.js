@@ -157,6 +157,22 @@ function girar(){
 
     // alterar aqui
 
+
+    if(randomNumber == number.value) {
+        mostrarMensagem.textContent = `acertou `
+
+    } else{
+        mostrarMensagem.textContent = `errou`
+        
+    }
+    if(randomNumber == number2.value) {
+        mostrarMensagem2.textContent = `acertou `
+
+    } else{
+        mostrarMensagem2.textContent = `errou`
+        
+    }
+
     girarDado.disabled = true;
     valorAposta.disabled = false;
     botaoAposta.disabled = true;
