@@ -156,6 +156,18 @@ function girar(){
 
     // alterar aqui
 
+    girarDado.disabled = true;
+    valorAposta.disabled = false;
+    botaoAposta.disabled = true;
+
+    valorAposta2.disabled = true;    
+    botaoAposta2.disabled = true;
+
+    select1 = '';
+    select2 = '';
+
+    number = '';
+    number2 = '';
        
 }
 
