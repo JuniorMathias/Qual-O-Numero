@@ -62,6 +62,7 @@ function valor(){
 
 function updateDisplay(val) {
    document.getElementById("counter-label").innerHTML = val;
+   document.getElementById("counter-label2").innerHTML = val;
 }
 
 //função para mostrar o número da aposta
@@ -163,11 +164,11 @@ function girar(){
     valorAposta2.disabled = true;    
     botaoAposta2.disabled = true;
 
-    select1 = '';
-    select2 = '';
+    select1.value = '';
+    select2.value = '';
 
-    number = '';
-    number2 = '';
+    number.value = '';
+    number2.value = '';
        
 }
 
