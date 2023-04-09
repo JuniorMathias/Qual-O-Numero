@@ -155,22 +155,27 @@ function girar(){
         default:
     }
 
-    // alterar aqui
-
-
+    // apostador um 
     if(randomNumber == number.value) {
         mostrarMensagem.textContent = `acertou `
+        
 
     } else{
         mostrarMensagem.textContent = `errou`
-        
+        let saldoAtual = parseFloat(document.getElementById("saldo0").value);
+        saldoAtual += parseFloat(select1.value)
+        document.getElementById("saldo0").value = saldoAtual.toFixed(2);
     }
+
+    //apostador dois
     if(randomNumber == number2.value) {
         mostrarMensagem2.textContent = `acertou `
 
     } else{
         mostrarMensagem2.textContent = `errou`
-        
+        let saldoAtual = parseFloat(document.getElementById("saldo0").value);
+        saldoAtual += parseFloat(select2.value)
+        document.getElementById("saldo0").value = saldoAtual.toFixed(2);
     }
 
     girarDado.disabled = true;
