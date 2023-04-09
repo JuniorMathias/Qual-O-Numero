@@ -155,27 +155,38 @@ function girar(){
         default:
     }
 
+
+    //SALDOS INICIAIS DOS JOGADORES E CASA
+    let saldoAtualCasa = parseFloat(document.getElementById("saldo0").value);
+    let saldoAtualUm = parseFloat(document.getElementById("saldo").value);
+    let saldoAtualDois = parseFloat(document.getElementById("saldo2").value);
     // apostador um 
     if(randomNumber == number.value) {
+        
         mostrarMensagem.textContent = `acertou `
+        saldoAtualUm += parseFloat(select1.value) + parseFloat(select1.value);
+        document.getElementById("saldo").value = saldoAtualUm.toFixed(2);
+        
         
 
     } else{
         mostrarMensagem.textContent = `errou`
-        let saldoAtual = parseFloat(document.getElementById("saldo0").value);
-        saldoAtual += parseFloat(select1.value)
-        document.getElementById("saldo0").value = saldoAtual.toFixed(2);
+        
+        saldoAtualCasa += parseFloat(select1.value)
+        document.getElementById("saldo0").value = saldoAtualCasa.toFixed(2);
     }
 
     //apostador dois
     if(randomNumber == number2.value) {
         mostrarMensagem2.textContent = `acertou `
+        saldoAtualDois += parseFloat(select2.value) + parseFloat(select2.value);
+        document.getElementById("saldo2").value = saldoAtualDois.toFixed(2);
 
     } else{
         mostrarMensagem2.textContent = `errou`
-        let saldoAtual = parseFloat(document.getElementById("saldo0").value);
-        saldoAtual += parseFloat(select2.value)
-        document.getElementById("saldo0").value = saldoAtual.toFixed(2);
+        let saldoAtualCasa = parseFloat(document.getElementById("saldo0").value);
+        saldoAtualCasa += parseFloat(select2.value)
+        document.getElementById("saldo0").value = saldoAtualCasa.toFixed(2);
     }
 
     girarDado.disabled = true;
