@@ -85,28 +85,49 @@ function girar(){
     }
     var randomNumber = Math.floor(Math.random()*6) + 1
     updateDisplay(++counterVal);
-    switch(randomNumber){
+    switch(randomNumber) {
         case 1:
-            dado.src = "/img/dados/dice1.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice1.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 2:
-            dado.src = "/img/dados/dice2.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice2.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 3:
-            dado.src = "/img/dados/dice3.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice3.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 4:
-            dado.src = "/img/dados/dice4.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice4.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 5:
-            dado.src = "/img/dados/dice5.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice5.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 6:
-            dado.src = "/img/dados/dice6.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice6.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         default:
+            dado.src = "/img/dadogirando.gif";
+            break;
     }
 
+    setTimeout(() => {
         if(number.value.length == 0){
     
             mostrarMensagem.textContent = `Escolha um número para adivinhar `
@@ -119,27 +140,21 @@ function girar(){
             atualizar.style.display = 'block';
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            number.disabled = false;
-            valorAposta.disabled = true;
-            valorAposta2.disabled = false;
-            number.value = '';
-            select1.value = '';
     
         } else{
     
             mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o nº sorteado foi ${randomNumber}`
            
-            number.disabled = false;
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            valorAposta.disabled = true;
-            valorAposta2.disabled = false;
-            number.value = '';
-            select1.value = '';
-            
         }
+        number.value = '';
+        select1.value = '';
+    }, 3000);
+        botaoAposta.disabled = true;
+        girarDado.disabled = true;
+        number.disabled = false;
+        valorAposta.disabled = true;
+        valorAposta2.disabled = false;
+        
     return number.value.length = 0;
 }
 
@@ -199,28 +214,48 @@ function girar2(){
     }
     var randomNumber = Math.floor(Math.random()*6) + 1
     updateDisplay2(++counterVal2);
-    switch(randomNumber){
+    switch(randomNumber) {
         case 1:
-            dado2.src = "/img/dados/dice1.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice1.png";
+            }, 3000);2
+            dado2.src = "/img/dadogirando.gif";
             break;
         case 2:
-            dado2.src = "/img/dados/dice2.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice2.png";
+            }, 3000);
+            dado2.src = "/img/dadogirando.gif";
             break;
         case 3:
-            dado2.src = "/img/dados/dice3.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice3.png";
+            }, 3000);
+            dado2.src = "/img/dadogirando.gif";
             break;
         case 4:
-            dado2.src = "/img/dados/dice4.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice4.png";
+            }, 3000);
+            dado2.src = "/img/dadogirando.gif";
             break;
         case 5:
-            dado2.src = "/img/dados/dice5.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice5.png";
+            }, 3000);
+            dado2.src = "/img/dadogirando.gif";
             break;
         case 6:
-            dado2.src = "/img/dados/dice6.png";
+            setTimeout(() => {
+                dado2.src = "/img/dados/dice6.png";
+            }, 3000);
+            dado2.src = "/img/dadogirando.gif";
             break;
         default:
+            dado2.src = "/img/dadogirando.gif";
+            break;
     }
-
+    setTimeout(() => {
         if(number2.value.length == 0){
     
             mostrarMensagem2.textContent = `Escolha um número para adivinhar `
@@ -233,27 +268,20 @@ function girar2(){
             atualizar.style.display = 'block';
             saldoAtual += parseFloat(select2.value) + parseFloat(select2.value);
             document.getElementById("saldo2").value = saldoAtual.toFixed(2);
-            botaoAposta2.disabled = true;
-            girarDado2.disabled = true;
-            number2.disabled = false;
-            valorAposta.disabled = false;
-            valorAposta2.disabled = true;
-            number2.value = '';
-            select2.value = '';
     
         } else{
     
             mostrarMensagem2.textContent = `ERROU! apostou no nº ${number2.value} e o número sorteado foi ${randomNumber}`
-           
-            number2.disabled = false;
-            botaoAposta2.disabled = true;
-            girarDado2.disabled = true;
-            valorAposta.disabled = false;
-            valorAposta2.disabled = true;
-            number2.value = '';
-            select2.value = '';
-            
         }
+        number2.value = '';
+        select2.value = '';
+    }, 3000);
+        botaoAposta2.disabled = true;
+        girarDado2.disabled = true;
+        number2.disabled = false;
+        valorAposta.disabled = false;
+        valorAposta2.disabled = true;
+        
     return number2.value.length = 0;
 }
 

@@ -54,22 +54,24 @@ function valor(){
 
 function updateDisplay(val) {
    let contar = document.getElementById("counter-label").innerHTML = val;
-   switch(contar){
-    case 1:
-        flork.src = "/img/errou.png";
-        break;
-    case 2:
-        flork.src = "/img/errou1.png";
-        break;
-    case 3:
-        flork.src = "/img/gameover.png";
-        break;
-    case 4:
-        flork.src = "/img/aposte.png";
-        break;
-    default:
-        flork.src = "/img/errou.png";
-}
+   setTimeout(() => {
+        switch(contar){
+            case 1:
+                flork.src = "/img/errou.png";
+                break;
+            case 2:
+                flork.src = "/img/errou1.png";
+                break;
+            case 3:
+                flork.src = "/img/gameover.png";
+                break;
+            case 4:
+                flork.src = "/img/aposte.png";
+                break;
+            default:
+                flork.src = "/img/errou.png";
+        }
+    }, 3000);
 }
 
 //função para mostrar o número da aposta
@@ -89,28 +91,50 @@ function apostar(){
 function girar(){
     var randomNumber = Math.floor(Math.random()*6) + 1
     updateDisplay(++counterVal);
-    switch(randomNumber){
+    
+    switch(randomNumber) {
         case 1:
-            dado.src = "/img/dados/dice1.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice1.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 2:
-            dado.src = "/img/dados/dice2.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice2.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 3:
-            dado.src = "/img/dados/dice3.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice3.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 4:
-            dado.src = "/img/dados/dice4.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice4.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 5:
-            dado.src = "/img/dados/dice5.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice5.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         case 6:
-            dado.src = "/img/dados/dice6.png";
+            setTimeout(() => {
+                dado.src = "/img/dados/dice6.png";
+            }, 3000);
+            dado.src = "/img/dadogirando.gif";
             break;
         default:
+            dado.src = "/img/dadogirando.gif";
+            break;
     }
-
+    setTimeout(() => {
+        
         if(number.value.length == 0){
     
             mostrarMensagem.textContent = `Escolha um número para adivinhar `
@@ -123,24 +147,19 @@ function girar(){
             saldoAtual += parseFloat(select1.value) + parseFloat(select1.value);
             document.getElementById("saldo").value = saldoAtual.toFixed(2);
             flork.src = "/img/acertou.png";
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            number.disabled = false;
-            valorAposta.disabled = false;
-            number.value = '';
-            select1.value = '';
     
         } else{
-    
             mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o nº sorteado foi ${randomNumber}`
-           
-            number.disabled = false;
-            botaoAposta.disabled = true;
-            girarDado.disabled = true;
-            valorAposta.disabled = false;
-            number.value = '';
-            select1.value = '';
-            
         }
+        number.value = '';
+        select1.value = '';
+    }, 3000);
+    
+    number.disabled = false;
+    botaoAposta.disabled = true;
+    girarDado.disabled = true;
+    valorAposta.disabled = false;
+  
+
     return number.value.length = 0;
 }
