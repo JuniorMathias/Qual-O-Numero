@@ -181,6 +181,7 @@ function girar(){
     let saldoAtualUm = parseFloat(document.getElementById("saldo").value);
     let saldoAtualDois = parseFloat(document.getElementById("saldo2").value);
     // apostador um 
+    setTimeout(() => {
     if(randomNumber == number.value) {
         
         mostrarMensagem.textContent = `acertou apostou no nº ${number.value} e o número sorteado foi ${randomNumber}`
@@ -192,7 +193,7 @@ function girar(){
         
 
     } else{
-        mostrarMensagem.textContent = `errou`
+        mostrarMensagem.textContent = `ERROU! apostou no nº ${number.value} e o número sorteado foi ${randomNumber}`
         saldoAtualCasa += parseFloat(select1.value)
         document.getElementById("saldo0").value = saldoAtualCasa.toFixed(2);
     }
@@ -206,12 +207,17 @@ function girar(){
         document.getElementById("saldo0").value = saldoAtualCasa.toFixed(2);
 
     } else{
-        mostrarMensagem2.textContent = `errou`
+        mostrarMensagem2.textContent = `ERROU! apostou no nº ${number2.value} e o número sorteado foi ${randomNumber}`
         let saldoAtualCasa = parseFloat(document.getElementById("saldo0").value);
         saldoAtualCasa += parseFloat(select2.value)
         document.getElementById("saldo0").value = saldoAtualCasa.toFixed(2);
     }
+    select1.value = '';
+    select2.value = '';
 
+    number.value = '';
+    number2.value = '';
+    }, 3000);
     girarDado.disabled = true;
     valorAposta.disabled = false;
     botaoAposta.disabled = true;
@@ -219,11 +225,7 @@ function girar(){
     valorAposta2.disabled = true;    
     botaoAposta2.disabled = true;
 
-    select1.value = '';
-    select2.value = '';
-
-    number.value = '';
-    number2.value = '';
+    
        
 }
 
