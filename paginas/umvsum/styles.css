@@ -43,7 +43,6 @@ h2{
 	right: 0;
 	left: 0;
 	margin: auto;
-	width: 100%;
 	text-align: center;
     font-family: 'Monoton', monospace;
     font-size: 2em;
@@ -75,7 +74,7 @@ h2{
     animation: animate 8.5s linear infinite;
 }
 #select01, #insertNumber,#select02, #insertNumber2 {
-    width: 100px;
+    width: 120px;
     height: 30px;
     border: none;
     border-radius: 5px;
@@ -149,18 +148,6 @@ h2{
     max-width: 90%;
     padding: 1.2rem;
     border-radius: 0.5rem;
-}
-#imgErrar{
-    position: fixed;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    width: 400px;
-    max-width: 90%;
-    padding: 1.2rem;
-    border-radius: 0.5rem;
-    animation: animate 1.0s linear infinite;
 }
 
 .modal-header{
