@@ -94,40 +94,40 @@ function girar(){
     
     switch(randomNumber) {
         case 1:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice1.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         case 2:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice2.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         case 3:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice3.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         case 4:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice4.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         case 5:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice5.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         case 6:
+            dado.src = "/img/dadogirando.gif";
             setTimeout(() => {
                 dado.src = "/img/dados/dice6.png";
             }, 3000);
-            dado.src = "/img/dadogirando.gif";
             break;
         default:
             dado.src = "/img/dadogirando.gif";
